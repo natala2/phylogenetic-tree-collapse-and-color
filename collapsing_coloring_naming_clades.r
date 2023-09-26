@@ -36,7 +36,7 @@ for (i in seq_along(colored_nodes)) {
 
 # Collapse the specified nodes to triangles with custom fill
 for (node in collapsed_nodes) {
-  p <- p %>% collapse(node = node, mode = "mixed", fill = "black", alpha = 0.5)
+  p <- p + collapse(node = node, mode = "mixed", fill = "black", alpha = 0.5)
     p <- p + geom_cladelabel(node = node, label = paste("clade", node), align = TRUE,
                             color = 'black', fontsize = 4)
 }
